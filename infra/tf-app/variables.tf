@@ -7,7 +7,8 @@ variable "subscription_id" {
 }
 
 
-/*Since these values are comming from prod.backend.hcl we dont need to define them here.  
+/*
+Since these values are comming from prod.backend.hcl we dont need to define them here.
 
 variable "state_resource_group" {
   description = "resource group"

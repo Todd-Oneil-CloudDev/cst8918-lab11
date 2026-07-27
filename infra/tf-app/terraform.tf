@@ -9,13 +9,11 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "~> 4.0.0"
     }
-
   }
 }
 
 provider "azurerm" {
   features {}
-  use_oidc = true
   subscription_id = var.subscription_id
-  use_oidc        = true // S.M Needed to add this to makes the provider authentication method explicit instead of allowing it to fall back to Azure CL
+  use_oidc = true // S.M Needed to add this to makes the provider authentication method explicit instead of allowing it to fall back to Azure CL
 }
