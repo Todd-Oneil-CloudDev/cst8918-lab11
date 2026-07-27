@@ -30,7 +30,6 @@ jobs:
     # The -backend=false flag is used to prevent Terraform from using the remote backend, which is not needed for static tests.
     - name: Terraform Init
       run: terraform init -backend=false
-
     # Validate terraform files
     - name: Terraform Validate
       run: terraform validate
