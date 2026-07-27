@@ -1,4 +1,9 @@
 # backend references
+variable "subscription_id" {
+  description = "The Azure subscription ID used by the AzureRM provider."
+  type        = string
+}
+
 variable "state_resource_group" {
   description = "resource group"
   type        = string

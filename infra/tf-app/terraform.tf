@@ -1,6 +1,3 @@
-variable "subscription_id" {
-  type = string
-}
 
 terraform {
   required_version = "~> 1.5"
