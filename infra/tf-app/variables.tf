@@ -37,11 +37,8 @@ variable "region" {
   default     = "canadacentral"
 }
 
-/* variable is not being used
-
 variable "resource_group" {
   description = "resource group"
   type        = string
   default     = "onei-sar-a12-rg"
 }
-*/
