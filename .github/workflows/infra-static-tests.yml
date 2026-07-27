@@ -29,7 +29,7 @@ jobs:
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     # The -backend=false flag is used to prevent Terraform from using the remote backend, which is not needed for static tests.
     - name: Terraform Init
-      run: terraform init -backend=false
+      run: terraform init -backend-config=../tf-backend/prod.backend.hcl
 
     # Validate terraform files
     - name: Terraform Validate
