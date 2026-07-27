@@ -15,5 +15,5 @@ terraform {
 provider "azurerm" {
   features {}
   subscription_id = var.subscription_id
-  use_oidc = true // S.M Needed to add this to makes the provider authentication method explicit instead of allowing it to fall back to Azure CL
+  use_oidc        = true // S.M Needed to add this to makes the provider authentication method explicit instead of allowing it to fall back to Azure CL
 }
