@@ -1,8 +1,13 @@
 # backend references
+
+
 variable "subscription_id" {
   description = "The Azure subscription ID used by the AzureRM provider."
   type        = string
 }
+
+
+/*Since these values are comming from prod.backend.hcl we dont need to define them here.  
 
 variable "state_resource_group" {
   description = "resource group"
@@ -22,6 +27,8 @@ variable "state_cont" {
   default     = "tfstate"
 }
 
+*/
+
 # tf-app variables
 variable "region" {
   description = "region for all resources"
@@ -29,8 +36,11 @@ variable "region" {
   default     = "canadacentral"
 }
 
+/* variable is not being used
+
 variable "resource_group" {
   description = "resource group"
   type        = string
   default     = "onei-sar-a12-rg"
 }
+*/
