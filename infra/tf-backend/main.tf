@@ -49,6 +49,11 @@ output "sa-name" {
   value       = azurerm_storage_account.actions.name
 }
 
+output "arm_access_key" {
+  value = azurerm_storage_account.actions.primary_access_key
+  sensitive = true
+}
+
 output "sa-cont-state" {
   description = "storage containenamer"
   value       = azurerm_storage_container.statecon.name
