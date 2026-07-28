@@ -1,4 +1,4 @@
-resource "azurerm_resource_group" "actions" {
-  name     = "onei-sar-a12-rg"
+resource "azurerm_resource_group" "app" {
+  name     = var.resource_group
   location = var.region
 }

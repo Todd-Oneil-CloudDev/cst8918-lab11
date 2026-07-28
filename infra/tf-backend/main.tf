@@ -50,7 +50,7 @@ output "sa-name" {
 }
 
 output "arm_access_key" {
-  value = azurerm_storage_account.actions.primary_access_key
+  value     = azurerm_storage_account.actions.primary_access_key
   sensitive = true
 }
 
