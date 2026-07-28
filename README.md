@@ -224,14 +224,21 @@ Conflicts were resolved while preserving both team members' contributions.
 
 ## Pull Request Checks
 
-![Pull Request Checks](screenshots/pr-checks.png)
+![Pull Request Checks](screenshots/all-checks-pass.png)
 
 ---
 
 ## Terraform Plan Output
+A typo was found in the intial configuration of the subt net. the following 2 screenshots sums up the terraform plan. The initial Virtual network was created and the subnet failed. After fixing the issue the pipeline then created only the subnet.
 
-![Terraform Plan](screenshots/pr-plan.png)
+### Virtual Network With Failed Subnet
+![Network Plan](screenshots/main-network-plan.png)
 
+### Subnet Creation
+![Subnet Plan](screenshots/subnet-tf-plan.png)
+
+### Full Plan Success Pipeline
+![Terraform Plan](screenshots/terraform-plan.png)
 ---
 
 ## Terraform Apply Workflow
