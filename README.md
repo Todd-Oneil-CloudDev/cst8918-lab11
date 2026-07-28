@@ -243,7 +243,7 @@ A typo was found in the intial configuration of the subt net. the following 2 sc
 
 ## Terraform Apply Workflow
 
-![Terraform Apply](screenshots/terraform-apply.png)
+![Terraform Apply](screenshots/tf-apply-wf.png)
 
 ---
 
