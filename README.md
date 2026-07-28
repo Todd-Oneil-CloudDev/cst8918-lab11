@@ -181,7 +181,7 @@ Several issues were encountered during implementation.
 
 ## GitHub OIDC Changes
 
-During development GitHub introduced a new OpenID Connect identity subject format.
+During development GitHub introduced a new OpenID Connect identity subject format that took effect on July 26, 2026.
 
 This caused authentication failures because the Azure Federated Credentials no longer matched the identity presented by GitHub Actions.
 
@@ -224,25 +224,36 @@ Conflicts were resolved while preserving both team members' contributions.
 
 ## Pull Request Checks
 
-![Pull Request Checks](screenshots/pr-checks.png)
+![Pull Request Checks](screenshots/all-checks-pass.png)
 
 ---
 
 ## Terraform Plan Output
+A typo was found in the intial configuration of the subt net. the following 2 screenshots sums up the terraform plan. The initial Virtual network was created and the subnet failed. After fixing the issue the pipeline then created only the subnet.
 
-![Terraform Plan](screenshots/pr-plan.png)
+### Virtual Network With Failed Subnet
+![Network Plan](screenshots/main-network-plan.png)
 
+### Subnet Creation
+![Subnet Plan](screenshots/subnet-tf-plan.png)
+
+### Full Plan Success Pipeline
+![Terraform Plan](screenshots/terraform-plan.png)
 ---
 
 ## Terraform Apply Workflow
 
-![Terraform Apply](screenshots/terraform-apply.png)
+![Terraform Apply](screenshots/tf-apply-wf.png)
 
 ---
 
 ## Drift Detection Workflow
+Todd ran terraform destroy prior to the Drift Detection workflow executing. So he recreated the resource group via terraform apply in tf-app and redid steps for identities. Although this resulted in a failed drift detection github action, the pipeline worked as intended. The action had exited as a failure as intended and created an issue to be addressed as shown in the below screenshots.
+### Exit As Failure
+![Terraform Drift Detection](screenshots/drift-detection-pipeline.png)
 
-![Terraform Drift Detection](screenshots/drift-detection.png)
+### Issue Created By Drift Pipeline
+![Terraform Drift Detection](screenshots/issue-by-dd.png)
 
 ---
 
