@@ -1,0 +1,7 @@
+{
+  "name": "pull-request",
+  "issuer": "https://token.actions.githubusercontent.com",
+  "subject": "repo:Todd-Oneil-CloudDev@255024547/cst8918-lab11@1310400201:pull_request",
+  "description": "CST8918 Lab12 - GitHub Actions",
+  "audiences": ["api://AzureADTokenExchange"]
+}
