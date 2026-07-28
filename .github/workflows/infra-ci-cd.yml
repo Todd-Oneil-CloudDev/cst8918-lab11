@@ -16,6 +16,7 @@ env:
   ARM_SUBSCRIPTION_ID: "${{ secrets.AZURE_SUBSCRIPTION_ID }}"
   ARM_TENANT_ID: "${{ secrets.AZURE_TENANT_ID }}"
   ARM_ACCESS_KEY: "${{ secrets.ARM_ACCESS_KEY }}"
+  ARM_PROVIDER_ENHANCED_REGISTRATION: false
   
   ARM_USE_OIDC: true
   TF_VAR_subscription_id: "${{ secrets.AZURE_SUBSCRIPTION_ID }}"
@@ -61,7 +62,7 @@ jobs:
   terraform-plan:
     name: 'Terraform Plan'
     runs-on: ubuntu-latest
-    # env:
+    env:
       #this is needed since we are running terraform with read-only permissions
       # ARM_SKIP_PROVIDER_REGISTRATION: true
     outputs:
