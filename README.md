@@ -181,7 +181,7 @@ Several issues were encountered during implementation.
 
 ## GitHub OIDC Changes
 
-During development GitHub introduced a new OpenID Connect identity subject format.
+During development GitHub introduced a new OpenID Connect identity subject format that took effect on July 26, 2026.
 
 This caused authentication failures because the Azure Federated Credentials no longer matched the identity presented by GitHub Actions.
 
@@ -248,8 +248,12 @@ A typo was found in the intial configuration of the subt net. the following 2 sc
 ---
 
 ## Drift Detection Workflow
+Todd ran terraform destroy prior to the Drift Detection workflow executing. So he recreated the resource group via terraform apply in tf-app and redid steps for identities. Although this resulted in a failed drift detection github action, the pipeline worked as intended. The action had exited as a failure as intended and created an issue to be addressed as shown in the below screenshots.
+### Exit As Failure
+![Terraform Drift Detection](screenshots/drift-detection-pipeline.png)
 
-![Terraform Drift Detection](screenshots/drift-detection.png)
+### Issue Created By Drift Pipeline
+![Terraform Drift Detection](screenshots/issue-by-dd.png)
 
 ---
 
